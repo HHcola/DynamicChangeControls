@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    
+    <com.example.custom.view.DynamicScrollView 
+        android:id="@+id/sv_app_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_detail_bg_default"
+        android:scrollbars="none"
+        >
+        
+        <LinearLayout 
+            android:id="@+id/ll_app_detail_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <View
+                android:id="@+id/view_pretend"
+                android:layout_width="match_parent"
+                android:layout_height="100dip" />
+            
+            <TextView 
+                android:id="@+id/tv_app_detail_content_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="100dip"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:textColor="#0000ff"
+                android:text="@string/app_detail_content_title"
+                />
+            <ImageView 
+                android:id="@+id/iv_app_detail_content_imageview_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:background="@drawable/banner_one"
+                />
+            
+                <ImageView 
+                android:id="@+id/iv_app_detail_content_imageview_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:background="@drawable/banner_four"
+                />
+                        
+                        
+               <ImageView 
+                android:id="@+id/iv_app_detail_content_imageview_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:background="@drawable/banner_one"
+                />
+        </LinearLayout>
+    </com.example.custom.view.DynamicScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_app_detail_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical">
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:gravity="top"
+            android:paddingTop="10dip" >
+
+            <FrameLayout
+                android:id="@+id/fl_app_detail_logo"
+                android:layout_width="90dip"
+                android:layout_height="90dip"
+                android:layout_marginLeft="14dip"
+                android:layout_marginRight="15dip"
+                android:paddingBottom="10dip" >
+
+                <ImageView
+                    android:id="@+id/iv_app_detail_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_no_default" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/fl_app_detail_logo"
+                android:orientation="vertical"
+                android:paddingRight="14dip" >
+
+                <TextView
+                    android:id="@+id/tv_app_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="15dip"
+                    android:ellipsize="end"
+                    android:text="for test"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_app_detail_download_num_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:drawableLeft="@drawable/icon_download_num"
+                    android:drawablePadding="2dip"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:singleLine="true"
+                    android:textColor="#8D8D8D"
+                    android:text="5000+|12.5MB"
+                    android:textSize="12dip" />
+
+               <FrameLayout
+                    android:id="@+id/fl_app_detail_install"
+                    android:layout_width="140dip"
+                    android:layout_height="40dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="20dip" >
+                    
+                <Button
+                    android:id="@+id/btn_app_detail_install"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#ffff00"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="#6a7b00"
+                    android:textSize="20dip" 
+                    android:text="download"
+                    />
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+</LinearLayout>
+</FrameLayout>
